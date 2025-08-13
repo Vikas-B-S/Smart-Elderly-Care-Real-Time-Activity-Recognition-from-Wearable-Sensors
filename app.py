@@ -36,7 +36,7 @@ def main():
     accf = st.text_input('Enter the frontal acceleration data from sensor')
     accl = st.text_input('Enter the lateral acceleration data from sensor')
 
-    inp_data = [accf,accv,accl,ant_ID,rssi,rfid_e]
+    inp_data = [float(accf),float(accv),float(accl),float(ant_ID),float(rssi),float(rfid_e)]
 
     if st.button('Predict'):
         response = prediction(inp_data)
@@ -45,5 +45,6 @@ def main():
 
 if __name__=='__main__':
     main()
+
 
 
